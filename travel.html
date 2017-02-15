@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>travel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="JS/jquery.js"></script>
+    <script type="text/javascript" src="JS/slides.js"></script>
+    <style>
+        .n2:link{background-color: rgb(222,167,147);
+            transform: scale(1.2);}
+    </style>
+</head>
+<body>
+<header class="top">
+    <div class="logo"><img src="images/p2_02.png"></div>
+    <div class="navigate">
+        <nav>
+            <ul>
+                <li><a href="home.html" class="n1">首页</a></li>
+                <li><a href="travel.html" class="n2">旅行</a></li>
+                <li><a href="entertainment.html" class="n3">娱乐</a></li>
+                <li><a href="study.html" class="n4">学习</a></li>
+                <li><a href="profile.html" class="n5">简介</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="content">
+        <div class="brief">
+            <p>这组照片是一位来自比利时的背包客拍摄的，他自称“环球探险家”，历时一年周游澳大利亚，
+                走过了40000千米的路程，用镜头记录下了无数令人窒息的澳洲美景，他的名字叫 Johan Lolos。</p>
+            <p>
+                在澳大利亚的一年，Lolos 去了无数个地方，看到了无数美景。他看到过全澳最美的日出、日落和星空，
+                亲临过全澳洲落差最大的瀑布，甚至还有幸拍到了澳洲海滩海龟产子画面……
+            </p>
+        </div>
+        <div class="slides">
+            <div class="J_Poster poster-main" data-setting='{
+                                                            "width":700,
+                                                            "height":440,
+                                                            "posterWidth":600,
+                                                            "posterHeight":400,
+                                                            "scale":0.8,
+                                                            "autoPlay":true,
+                                                            "delay":2000,
+                                                            "speed":300
+                                                            }'>
+                <div class="poster-btn poster-prev-btn"></div>
+                <ul class="poster-list">
+                    <li class="poster-item"><a href="#"><img src="images/p1.jpg" width="100%" height="100%"></a></li>
+                    <li class="poster-item"><a href="#"><img src="images/p2.jpg" width="100%" height="100%"></a></li>
+                    <li class="poster-item"><a href="#"><img src="images/p3.jpg" width="100%" height="100%"></a></li>
+                    <li class="poster-item"><a href="#"><img src="images/p4.jpg" width="100%" height="100%"></a></li>
+                    <li class="poster-item"><a href="#"><img src="images/p5.jpg" width="100%" height="100%"></a></li>
+                </ul>
+                <div class="poster-btn poster-next-btn"></div>
+            </div>
+        </div>
+        <div class="tips">
+            <h2>TIPS:</h2>
+            <ul>
+                <li class="modification"></li>
+                <li class="gap1"></li>
+                <li class="gap2"></li>
+                <li class="text"><span>出发前，请,先查好天气!</span></li>
+            </ul>
+            <ul>
+                <li class="modification"></li>
+                <li class="gap1"></li>
+                <li class="gap2"></li>
+                <li class="text"><span>旅途是享受，不是疲惫!</span></li>
+            </ul>
+            <ul>
+                <li class="modification"></li>
+                <li class="gap1"></li>
+                <li class="gap2"></li>
+                <li class="text"><span>一场美好的旅行，不在于风景，而在于心情!</span></li>
+            </ul>
+            <ul>
+                <li class="modification"></li>
+                <li class="gap1"></li>
+                <li class="gap2"></li>
+                <li class="text"><span>说走就走的旅行，听着很美好!但，现实很崩溃!</span></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<footer class="bottom">
+    <ul>
+        <li><a href="http://weibo.com"><img src="images/qq.png"></a></li>
+        <li><p>Copyright ©2016 [个人主页] Powered By [Dou Lu] Version 1.0.0</p></li>
+    </ul>
+</footer>
+</body>
+<script>
+
+    $(function () {
+        Carousel.init($(".J_Poster"));
+    });
+</script>
+</html>

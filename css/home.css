@@ -1,0 +1,65 @@
+*{margin: 0;padding: 0;}
+/*body,.content{border:solid greenyellow 1px;}*/
+body{width: 900px;height: 1100px;margin: 0 auto;}
+header{height: 900px;}
+.ball-box,.content-box{float: left;opacity: 0.0;}
+.content{height: 760px;}
+.travel,.entertainment,.study{width: 750px;height: 250px;}
+.box{position: relative;margin: 40px 0 0 100px;float: left;
+    width: 250px;
+    height: 160px;
+    background: white;
+    border: 2px solid #efefef;
+    box-shadow: 0 1px 4px rgba(0.0.0.0.27),0 0 60px rgba(0,0,0,0.27) inset;
+    transform: rotate(10deg);
+}
+.one{transform: rotate(10deg);width: 260px;  height: 190px;}
+.two{transform: rotate(60deg);width: 200px;height: 160px;}
+.three{transform: rotate(-10deg);width: 230px;height: 160px;}
+.box img{
+    display: block;
+    margin: 5px;
+}
+.one:hover,.two:hover,.three:hover{transform: rotate(0deg);}
+.box img:hover{cursor: pointer;transition: 01s;transform: scale(1.3);}
+.two img:hover{transform: scale(1.5);}
+.three img:hover{transform: scale(1.4);}
+.one img{width: 250px;  height: 180px;}
+.two img{width: 190px;height: 150px;}
+.three img{width: 220px;height: 150px;}
+.box:before{
+    content: '';
+    position: absolute;
+    z-index: -2;
+    width: 90%;
+    height: 80%;
+    left: 20px;
+    bottom: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    transform: skew(-12deg) rotate(-4deg);
+}
+.box:after{
+    content: '';
+    position: absolute;
+    z-index: -2;
+    width: 90%;
+    height: 80%;
+    right: 20px;
+    bottom: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    transform: skew(12deg) rotate(4deg);
+}
+.describe{width: 300px;height: 140px;float: right;border: solid rgb(222,167,147) 1px;padding-top: 20px;
+    margin:50px 40px 0 0;transform: rotate(-20deg);border-radius: 50px;}
+.entertainment .describe{transform: rotate(0deg);}
+.study .describe{width: 330px;height: 160px;float: right;border: solid rgb(222,167,147) 1px;padding-top: 20px;
+    margin:40px 40px 0 0;transform: rotate(20deg);border-radius: 50px;}
+.describe article h1{text-align: center}
+.describe article ul{list-style-type:circle;margin-left: 30px;}
+.describe article p{font-size: 18px;margin-top: 10px;}
+.footer{height: 200px;}
+.contact p{font-size: 25px;width: 26px;float: left;margin:25px -140px 0 150px;}
+.contact ul{list-style-type: none;float: left;}
+.contact ul li{float: left;margin-left: 160px;margin-top: -10px;}
+.copyright{height: 25px;width: 600px;float: left;margin: 45px 0 0 150px;}
+.copyright p{font-size: 18px;}

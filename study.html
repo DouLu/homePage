@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>study</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .n4:link {
+            background-color: rgb(222, 167, 147);
+            transform: scale(1.2);
+        }
+    </style>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+        function drag(ev) {
+            ev.dataTransfer.setData("Text", ev.target.id);
+        }
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("Text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+    <script type="text/javascript" src="JS/bingo.js"></script>
+</head>
+<body>
+<header class="top">
+    <div class="logo"><img src="images/p2_02.png"></div>
+    <div class="navigate">
+        <nav>
+            <ul>
+                <li><a href="home.html" class="n1">首页</a></li>
+                <li><a href="travel.html" class="n2">旅行</a></li>
+                <li><a href="entertainment.html" class="n3">娱乐</a></li>
+                <li><a href="study.html" class="n4">学习</a></li>
+                <li><a href="profile.html" class="n5">简介</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="content">
+        <div class="block1">
+            <div class="c1">
+                <h1>HTML5 拖放（Drag和Drop）</h1>
+
+                <h2>1、设置元素为可拖放</h2>
+
+                <p>首先，为了使元素可拖动，把draggable属性设置为true</p>
+
+                <h2>2、拖动什么 - ondragstart和setData()</h2>
+
+                <p>然后，规定当元素被拖动时，会发生什么</p>
+
+                <h2>3、放到何处 - ondragover</h2>
+
+                <p>ondragover事件规定在何处放置被拖动的数据。默认地，无法将数据/元素放置到其他元素中。
+                    如果需要设置允许放置，我们必须阻止对元素的默认处理方式。
+                    这要通过调用 ondragover 事件的 event.preventDefault() 方法</p>
+
+                <h2>4、进行放置 - ondrop</h2>
+
+                <p>当放置被拖数据时，会发生 drop 事件</p>
+                <span style="font-size: 18px;margin-left: 300px;color: black;">
+                    <a href="http://www.runoob.com/html/html5-draganddrop.html">
+                        更多示例</a></span>
+            </div>
+            <div class="html5">
+                <p>可以将图片拖拽到下面方框里！</p>
+
+                <div id="div2"><img id="drag1" src="images/5.png" draggable="true"
+                                    ondragstart="drag(event)" width="48" height="48">
+                </div>
+                <div id="div1" ondrop="drop(event)"
+                     ondragover="allowDrop(event)"></div>
+            </div>
+        </div>
+        <div class="block2">
+            <div class="magnifier">
+                <div class="circle"></div>
+                <div class="rect"></div>
+            </div>
+            <div class="icon1">
+                <div class="upper"></div>
+                <div class="main-part">
+                    <div></div>
+                </div>
+            </div>
+            <div class="helmet"></div>
+            <div class="tr">
+            <span>左图为纯CSS3 制作的三个图标</span><br/><br/>
+                <span><a href="http://one-div.com">更多示例</a></span>
+                </div>
+        </div>
+        <div class="block3">
+            <div class="js">
+                <div class="tran"><h1>JavaScript!</h1></div>
+                <div class="block"><h1>JS实现bingo游戏！</h1></div>
+            </div>
+            <div class="bingo">
+                <h1>Bingo!</h1>
+                <table>
+                    <tr>
+                        <th width="20%">B</th>
+                        <th width="20%">I</th>
+                        <th width="20%">N</th>
+                        <th width="20%">G</th>
+                        <th width="20%">O</th>
+                    </tr>
+                    <tr>
+                        <td id="square0">&nbsp;</td>
+                        <td id="square5">&nbsp;</td>
+                        <td id="square10">&nbsp;</td>
+                        <td id="square14">&nbsp;</td>
+                        <td id="square19">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="square1">&nbsp;</td>
+                        <td id="square6">&nbsp;</td>
+                        <td id="square11">&nbsp;</td>
+                        <td id="square15">&nbsp;</td>
+                        <td id="square20">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="square2">&nbsp;</td>
+                        <td id="square7">&nbsp;</td>
+                        <td id="free">Free</td>
+                        <td id="square16">&nbsp;</td>
+                        <td id="square21">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="square3">&nbsp;</td>
+                        <td id="square8">&nbsp;</td>
+                        <td id="square12">&nbsp;</td>
+                        <td id="square17">&nbsp;</td>
+                        <td id="square22">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="square4">&nbsp;</td>
+                        <td id="square9">&nbsp;</td>
+                        <td id="square13">&nbsp;</td>
+                        <td id="square18">&nbsp;</td>
+                        <td id="square23">&nbsp;</td>
+                    </tr>
+                </table><br/>
+                <p><a href="study.html" id="reload">Click here</a> to create a new card</p>
+            </div>
+        </div>
+    </div>
+</header>
+<footer class="bottom">
+    <ul>
+        <li><a href="http://weibo.com"><img src="images/qq.png"></a></li>
+        <li><p>Copyright ©2016 [个人主页] Powered By [Dou Lu] Version 1.0.0</p></li>
+    </ul>
+</footer>
+</body>
+</html>

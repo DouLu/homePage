@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>pentagon</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .circle{width: 200px;height: 200px;margin:100px auto;position: relative;
+            /*border-radius:120px;border:2px solid black;*/
+            transform: rotate(0deg);
+        }
+        .side{width: 120px;height: 3px;background-color: black;position: absolute;
+        }
+        .one1{top:35px;left: -8px;transform: rotate(-36deg);}
+        .one2{top:35px;left: 88px;transform: rotate(36deg);}
+        .one3{top:125px;left: -38px;transform: rotate(72deg);}
+        .one4{top:125px;left: 118px;transform: rotate(-72deg);}
+        .one5{bottom: 15px;left: 40px;}
+    </style>
+</head>
+<body>
+<div class="circle">
+    <div class="side one1"></div>
+    <div class="side one2"></div>
+    <div class="side one3"></div>
+    <div class="side one4"></div>
+    <div class="side one5"></div>
+</div>
+</body>
+</html>
